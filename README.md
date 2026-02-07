@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ocheli Jethro | Web Developer</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ocheli Jethro is a web developer building fast, modern, and responsive websites for businesses and individuals.">
+  <style>
+  body { background: black; color:white; font-family: Arial, sans-serif; }
+  h1{color: blue;} 
+  h2{color: yellow;}
+  h3{color: green;}
+  h5{color:orange;}
+
+  header, section, footer {
+    padding: 20px;
+  }
+
+  button {
+    background: green;
+    color: black;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .card {
+    border: 1px solid #333;
+    padding: 15px;
+    margin: 10px 0;
+  }
+  nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+  <h2 class="logo">Ocheli Ifeanyi Jethro</h2>
+  <div class="menu-toggle" id="menuToggle">≡</div>
+  <nav id="navLinks">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="projects.html">Projects</a> |
+    <a href="services.html">Services</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>I Build Websites That Help Businesses Grow</h1>
+  <p>
+    I help startups, small businesses, and individuals create fast, modern, and responsive websites
+    that attract customers and build trust online.
+  </p>
+  <button onclick="scrollToProjects()">View My Work</button>
+<a href="https://wa.me/2349056033744" class="cta">Hire Me Now</a>
+</section>
+
+<section id="projectsPreview" class="container">
+  <h2>Featured Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Responsive personal website to showcase skills and attract clients.</p>
+      <button>View Project</button>
+    </div>
+    <div class="card">
+      <h3>Login System</h3>
+      <p>Secure authentication system built with HTML, CSS & JavaScript.</p>
+      <button>View Project</button>
+    </div>
+    <div class="card">
+      <h3>Dashboard UI</h3>
+      <p>Modern admin dashboard interface for managing users and data.</p>
+      <button>View Project</button>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>About Me</h2>
+  <div class="card">
+    <p id="aboutText">
+      I’m Ocheli Ifeanyi Jethro, a web developer who helps individuals and businesses create clean,
+      professional websites that load fast, work on all devices, and look modern.
+      <span id="moreText">
+        I specialize in HTML, CSS, and JavaScript, focusing on usability, performance, and functional design.
+        I work closely with clients to turn ideas into reliable, scalable websites that solve real problems.
+      </span>
+    </p>
+    <button id="toggleBtn">Read more</button>
+  </div>
+</section>
+
+<section class="container">
+  <h2>My Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Professional personal portfolio showcasing skills and projects.</p>
+      <button>View Project</button>
+    </div>
+    <div class="card">
+      <h3>Admin Dashboard</h3>
+      <p>Clean dashboard UI with charts and data management features.</p>
+      <button>View Project</button>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Services I Offer</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Website Development</h3>
+      <p>Responsive websites for businesses and personal brands.</p>
+    </div>
+    <div class="card">
+      <h3>Landing Pages</h3>
+      <p>High-converting landing pages designed to generate leads and sales.</p>
+    </div>
+    <div class="card">
+      <h3>JavaScript Features</h3>
+      <p>Forms, dashboards, authentication systems, and dynamic functionality.</p>
+    </div>
+    <div class="card">
+      <h3>Bug Fixing & Improvements</h3>
+      <p>Fix broken layouts, improve performance, and clean up messy code.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Pricing</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Basic Website</h3>
+      <p>₦50,000+</p>
+    </div>
+    <div class="card">
+      <h3>Business Website</h3>
+      <p>₦100,000+</p>
+    </div>
+    <div class="card">
+      <h3>Custom Dashboard</h3>
+      <p>₦150,000+</p>
+    </div>
+  </div>
+  
+</section>
+<p><strong>Make Your Payment Below</strong></p>
+
+  
+<a href="https://buy.stripe.com/test_00w9AS7kS3Pd4q5epe3Je00" target="_blank">
+  <button>Pay Securely (Credit / Debit Card)</button>
+</a>
+<section class="container">
+  <h5>Let’s Work Together</h5>
+  <p>
+    Have a project in mind? Need a website or want to improve your current one?
+    Send me a message and let’s get started.
+  </p>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required aria-label="Name"><br>
+    <input type="email" placeholder="Your Email" required aria-label="Email"><br>
+    <textarea placeholder="Your Message" aria-label="Message"></textarea><br>
+    <button type="submit">Send Message</button>
+  </form>
+  <a href="https://wa.me/2349056033744" class="cta">Chat on WhatsApp</a>
+  <p id="formMsg"></p>
+</section>
+
+<footer>
+  <p>© 2026 Ocheli Ifeanyi Jethro. Building reliable websites for real businesses.</p>
+</footer>
+
+<script>
+/* ===== MENU TOGGLE ===== */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+menuToggle.addEventListener("click", () => {
+  navLinks.style.display = navLinks.style.display === "block" ? "none" : "block";
+});
+
+/* ===== SCROLL TO PROJECTS ===== */
+function scrollToProjects() {
+  document.getElementById("projectsPreview").scrollIntoView({ behavior: "smooth" });
+}
+
+/* ===== READ MORE / READ LESS ===== */
+const toggleBtn = document.getElementById("toggleBtn");
+const moreText = document.getElementById("moreText");
+moreText.style.display = "none";
+toggleBtn.addEventListener("click", () => {
+  if (moreText.style.display === "none") {
+    moreText.style.display = "inline";
+    toggleBtn.textContent = "Read less";
+  } else {
+    moreText.style.display = "none";
+    toggleBtn.textContent = "Read more";
+  }
+});
+
+/* ===== CONTACT FORM ===== */
+const contactForm = document.getElementById("contactForm");
+const formMsg = document.getElementById("formMsg");
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formMsg.textContent = "✅ Message sent successfully!";
+  formMsg.style.color = "lightgreen";
+  contactForm.reset();
+});
+</script>
+<a href="https://wa.me/2349056033744"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  💬
+</a>
+
+</body>
+</html>
